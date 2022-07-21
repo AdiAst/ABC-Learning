@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Course Details</title>
+  </head>
+  <body>
+    <nav id="nav"></nav>
+
+    <div id="courseDetail"></div>
+
+    <footer class="background-default"></footer>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+    <script>
+      var url_string = window.location.href;
+      var url = new URL(url_string);
+      var status = url.searchParams.get("status");
+      if (status == "introductionJava") {
+        $("#courseDetail").html(`
+        <ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="course.html">Course</a></li>
+        <li><a href="course-detail.html?status=introductionJava">Java Introduction</a></li>
+        </ul>
+        <div class="article">
+        <h1>Introduction Java</h1>
+        <h2>#History</h2>
+        <article>
+            James Gosling, Mike Sheridan, and Patrick Naughton initiated the Java
+            language project in June 1991.Java was originally designed for
+            interactive television, but it was too advanced for the digital cable
+            television industry at the time. The language was initially called Oak
+            after an oak tree that stood outside Gosling's office. Later the project
+            went by the name Green and was finally renamed Java, from Java coffee, a
+            type of coffee from Indonesia. Gosling designed Java with a C/C++-style
+            syntax that system and application programmers would find familiar.
+            <br /><br />
+            Sun Microsystems released the first public implementation as Java 1.0 in
+            1996. It promised write once, run anywhere (WORA) functionality,
+            providing no-cost run-times on popular platforms. Fairly secure and
+            featuring configurable security, it allowed network- and file-access
+            restrictions. Major web browsers soon incorporated the ability to run
+            Java applets within web pages, and Java quickly became popular. The Java
+            1.0 compiler was re-written in Java by Arthur van Hoff to comply
+            strictly with the Java 1.0 language specification. With the advent of
+            Java 2 (released initially as J2SE 1.2 in December 1998 1999), new
+            versions had multiple configurations built for different types of
+            platforms. J2EE included technologies and APIs for enterprise
+            applications typically run in server environments, while J2ME featured
+            APIs optimized for mobile applications. The desktop version was renamed
+            J2SE. In 2006, for marketing purposes, Sun renamed new J2 versions as
+            Java EE, Java ME, and Java SE, respectively.
+            <br /><br />
+            In 1997, Sun Microsystems approached the ISO/IEC JTC 1 standards body
+            and later the Ecma International to formalize Java, but it soon withdrew
+            from the process. Java remains a de facto standard, controlled through
+            the Java Community Process. At one time, Sun made most of its Java
+            implementations available without charge, despite their proprietary
+            software status. Sun generated revenue from Java through the selling of
+            licenses for specialized products such as the Java Enterprise System.
+            <br /><br />
+            On November 13, 2006, Sun released much of its Java virtual machine
+            (JVM) as free and open-source software (FOSS), under the terms of the
+            GPL-2.0-only license. On May 8, 2007, Sun finished the process, making
+            all of its JVM's core code available under free software/open-source
+            distribution terms, aside from a small portion of code to which Sun did
+            not hold the copyright.
+            <br /><br />
+            Sun's vice-president Rich Green said that Sun's ideal role with regard
+            to Java was as an evangelist. Following Oracle Corporation's acquisition
+            of Sun Microsystems in 2009 10, Oracle has described itself as the
+            steward of Java technology with a relentless commitment to fostering a
+            community of participation and transparency. This did not prevent Oracle
+            from filing a lawsuit against Google shortly after that for using Java
+            inside the Android SDK (see the Android section).
+            <br /><br />
+            On April 2, 2010, James Gosling resigned from Oracle.
+            <br /><br />
+            In January 2016, Oracle announced that Java run-time environments based
+            on JDK 9 will discontinue the browser plugin.
+            <br /><br />
+            Java software runs on everything from laptops to data centers, game
+            consoles to scientific supercomputers.
+        </article>
+        </div>
+        `);
+      } else if (status == "installationJava") {
+        $("#courseDetail").html(`
+      <ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="course.html">Course</a></li>
+        <li>
+          <a href="course-detail.html?status=installationJava"
+            >Java Installation</a
+          >
+        </li>
+      </ul>
+      <div class="article">
+  <h1>Installation Java</h1>
+  <article>
+    It is recommended, before you proceed with online installation you may want
+    to disable your Internet firewall. In some cases the default firewall
+    settings are set to reject all automatic or online installations such as the
+    Java online installation. If the firewall is not configured appropriately it
+    may stall the download/install operation of Java under certain conditions.
+    Refer to your specific Internet firewall manual for instructions on how to
+    disable your Internet Firewall.
+    <br /><br />
+    Go to the Manual download page
+    <br /><br />
+    Click on Windows Online
+    <br /><br />
+    The File Download dialog box appears prompting you to run or save the
+    download file To run the installer, click Run. To save the file for later
+    installation, click Save. Choose the folder location and save the file to
+    your local system. Tip: Save the file to a known location on your computer,
+    for example, to your desktop. Double-click on the saved file to start the
+    installation process.
+    <br /><br />
+    The installation process starts. Click the Install button to accept the
+    license terms and to continue with the installation.
+    <br /><br />
+    <img
+      src="https://www.java.com/content/published/api/v1.1/assets/CONTF70B1D4C694145B7942B9FD6B6C45758/native?cb=_cache_96b5&channelToken=1f7d2611846d4457b213dfc9048724dc"
+      alt=""
+    />
+    <br /><br />
+    Oracle has partnered with companies that offer various products. The
+    installer may present you with option to install these programs when you
+    install Java. After ensuring that the desired programs are selected, click
+    the Next button to continue the installation.
+    <br /><br />
+    A few brief dialogs confirm the last steps of the installation process;
+    click Close on the last dialog. This will complete Java installation
+    process.
+    <br /><br />
+    <img
+      src="https://www.java.com/content/published/api/v1.1/assets/CONTF70B1D4C694145B7942B9FD6B6C45758/native?cb=_cache_96b5&channelToken=1f7d2611846d4457b213dfc9048724dc"
+      alt=""
+    />
+    <br /><br />
+    Info iconDetect older versions (8u20 and later versions). Starting with Java
+    8 Update 20 (8u20), on Windows systems, the Java Uninstall Tool is
+    integrated with the installer to provide an option to remove older versions
+    of Java from the system. The change is applicable to 32 bit and 64 bit
+    Windows platforms.
+    <h2>Notifications about disabled Java and restoring prompts</h2>
+    The installer notifies you if Java content is disabled in web browsers, and
+    provides instructions for enabling it. If you previously chose to hide some
+    of the security prompts for applets and Java Web Start applications, the
+    installer provides an option for restoring the prompts. The installer may
+    ask you to reboot your computer if you chose not to restart an internet
+    browser when it prompted you to do so.
+  </article>
+</div>
+
+      `);
+      } else if (status == "introductionNet") {
+        $("#courseDetail").html(`
+      <ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="course.html">Course</a></li>
+        <li>
+          <a href="course-detail.html?status=introductionNet"
+            >Introduction .Net</a
+          >
+        </li>
+      </ul>
+      <div class="article">
+        <h1>Introduction .Net</h1>
+        <h2>#History</h2>
+        <article>
+          The .NET Framework (pronounced as "dot net") is a proprietary software framework developed by Microsoft that runs primarily on Microsoft Windows. It was the predominant implementation of the Common Language Infrastructure (CLI) until being superseded by the cross-platform .NET project. It includes a large class library called Framework Class Library (FCL) and provides language interoperability (each language can use code written in other languages) across several programming languages. Programs written for .NET Framework execute in a software environment (in contrast to a hardware environment) named the Common Language Runtime (CLR). The CLR is an application virtual machine that provides services such as security, memory management, and exception handling. As such, computer code written using .NET Framework is called "managed code". FCL and CLR together constitute the .NET Framework.
+<br><br>
+FCL provides the user interface, data access, database connectivity, cryptography, web application development, numeric algorithms, and network communications. Programmers produce software by combining their source code with .NET Framework and other libraries. The framework is intended to be used by most new applications created for the Windows platform. Microsoft also produces an integrated development environment for .NET software called Visual Studio.
+<br><br>
+.NET Framework began as proprietary software, although the firm worked to standardize the software stack almost immediately, even before its first release. Despite the standardization efforts, developers, mainly those in the free and open-source software communities, expressed their unease with the selected terms and the prospects of any free and open-source implementation, especially regarding software patents. Since then, Microsoft has changed .NET development to more closely follow a contemporary model of a community-developed software project, including issuing an update to its patent promising to address the concerns.
+<br><br>
+In April 2019, Microsoft released .NET Framework 4.8, the last version of the framework as a proprietary offering. Only monthly security and reliability bug fixes to that version have been released since then. No further changes to that version are planned. 
+        </article>
+      </div>
+      `);
+      } else if (status == "installationNet") {
+        $("#courseDetail").html(`
+  <ul class="breadcrumb">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="course.html">Course</a></li>
+    <li>
+      <a href="course-detail.html?status=installationNet"
+        >.Net Installation</a
+      >
+    </li>
+  </ul>
+  <div class="article">
+    <h1>Installation .Net</h1>
+    <article>
+        You may need the .NET Framework 3.5 to run an app on Windows 11, Windows 10, Windows 8.1, and Windows 8. You can also use these instructions for earlier Windows versions.
+        <h2>Download the offline installer</h2>
+        The .NET Framework 3.5 SP1 offline installer is available on the .NET Framework 3.5 SP1 Download page and is available for Windows versions prior to Windows 10. 
+        <h2>Install the .NET Framework 3.5 on Demand</h2>
+        You may see the following configuration dialog if you try to run an app that requires the .NET Framework 3.5. Choose Install this feature to enable the .NET Framework 3.5. This option requires an Internet connection. <br><br>
+ 
+        <img src="https://docs.microsoft.com/en-us/dotnet/framework/install/media/dotnet-35-windows/dotnet-framework-installation-dialog.png" alt="">
+      
+        <h2>Why am I getting this pop-up?</h2>
+        The .NET Framework is created by Microsoft and provides an environment for running applications. There are different versions available. Many companies develop their apps to run using the .NET Framework, and these apps target a specific version. If you see this pop-up, you're trying to run an application that requires the .NET Framework version 3.5, but that version is not installed on your system.
+    </article>
+  </div>
+  `);
+      } else {
+        $("#courseDetail").html(`
+      <div class="article">
+        <h1>No Module</h1>
+      </div>
+      `);
+      }
+    </script>
+  </body>
+</html>

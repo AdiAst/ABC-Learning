@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Course Schedule</title>
+    <style>
+      #calendar {
+        width: 66vw;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px auto;
+        background-color: #b89eff;
+        padding: 30px;
+      }
+      #calendar div {
+        margin: 0;
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background-color: #cbb8ff;
+        text-align: right;
+      }
+      #calendar div:nth-child(even) {
+        background-color: #ded2ff;
+      }
+      .dot {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        bottom: 10px;
+        left: 10px;
+        background-color: #764af1;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body onload="calendar()">
+    <!-- Navbar -->
+    <nav id="nav"></nav>
+    <ul class="breadcrumb">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="course-schedule.html">Course Schedule</a></li>
+    </ul>
+    <center>
+      <h1>Course Schedule</h1>
+    </center>
+    <h1 id="date" style="margin-left: 200px"></h1>
+    <div id="calendar"></div>
+    <div class="container">
+      <button onclick="back()" class="button">
+        <i class="fa fa-angle-left" style="font-size: 21px"></i>
+      </button>
+      <button onclick="calendar()" class="button">
+        <i class="fa fa-angle-right" style="font-size: 21px"></i>
+      </button>
+    </div>
+    <!-- Footer -->
+    <footer class="background-default"></footer>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+    <script>
+      const monthName = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+      let d = new Date();
+      const getDays = (year, month) => {
+        return new Date(year, month, 0).getDate();
+      };
+      var link = document.createElement("span");
+      link.innerHTML = "<a href='schedule-detail.html' class='dot'></a>";
+      var link2 = document.createElement("span");
+      link2.innerHTML = "<a href='schedule-detail.html' class='dot'></a>";
+      let now = -1;
+
+      function calendar() {
+        now += 1;
+        $("#calendar").html("");
+        let Month = d.getMonth() + now;
+        $("#date").html(monthName[Month]);
+        let totalDay = getDays(new Date().getFullYear(), Month + 1);
+        let i = 1;
+        for (i; i <= totalDay; i++) {
+          $("#calendar").append("<div class='day'>" + i + "</div>");
+        }
+        let parent = document.querySelector("#calendar");
+        let dot = parent.querySelectorAll(".day");
+        if ($("#date").html() == "July") {
+          dot[16 - 1].append(link);
+          dot[17 - 1].append(link2);
+        }
+      }
+      function back() {
+        now -= 1;
+        $("#calendar").html("");
+        let Month = d.getMonth() + now;
+        $("#date").html(monthName[Month]);
+        let totalDay = getDays(new Date().getFullYear(), Month + 1);
+        let i = 1;
+        for (i; i <= totalDay; i++) {
+          $("#calendar").append("<div class='day'>" + i + "</div>");
+        }
+        let parent = document.querySelector("#calendar");
+        let dot = parent.querySelectorAll(".day");
+        if ($("#date").html() == "July") {
+          dot[16 - 1].append(link);
+          dot[17 - 1].append(link2);
+        }
+      }
+    </script>
+  </body>
+</html>

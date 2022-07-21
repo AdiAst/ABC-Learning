@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>ABC Learning Center</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav id="nav"></nav>
+    <!-- Hero Banner -->
+    <header id="hero-banner">
+      <div class="container">
+        <div>
+          <h1>ABC Learning Center</h1>
+          <p>
+            ABC Learning Center is a website that will help you to be a
+            professional programer. <br />
+            we provide you with the best course ever.
+          </p>
+          <br />
+          <a href="course.html" class="button">Explore Course</a>
+        </div>
+        <div>
+          <img
+            src="src/img/hero-banner-ilustration.svg"
+            alt="a person study with his laptop"
+            width="400px"
+          />
+        </div>
+      </div>
+    </header>
+    <!-- Project -->
+    <section id="project" class="container card background-default">
+      <div>
+        <h2>Awesome Project</h2>
+        <p>
+          Hello there!, you might be thinking if we just read the module it's
+          still not enough to make you good at programming. at that case we will
+          make you do a project in every module to test your knowledge and gain
+          some experience.
+          <br />
+          <br />
+          For the example on first javascript project, learner must create a
+          digital clock or on the second project, learner will create rock paper
+          scissors game using javascript. Not only beginer level project will be
+          added, advenced level project such as e-commerce also there, so
+          learner will gain a lot of experience.
+        </p>
+      </div>
+      <div>
+        <div style="max-width: 700px" class="padding-horizontal">
+          <img
+            class="slides"
+            src="src/img/project1.jpg"
+            width="300px"
+            height="200px"
+          />
+          <img
+            class="slides"
+            src="src/img/project2.jpg"
+            width="300px"
+            height="200px"
+          />
+          <img
+            class="slides"
+            src="src/img/project3.jpg"
+            width="300px"
+            height="200px"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- New Course -->
+    <section id="course" class="container">
+      <div class="container card">
+        <img
+          src="src/img/microsoft.jpg"
+          alt="illustration of html"
+          width="350px"
+          height="100%"
+        />
+        <div>
+          <h2>Microsoft Word</h2>
+          <p>
+            Microsoft Word is a word processing software developed by Microsoft.
+            It was first released on October 25, 1983. Under the name Multi-Tool
+            Word for Xenix systems.
+          </p>
+          <a href="course.html" class="button">Enroll this Class</a>
+        </div>
+      </div>
+
+      <div class="padding-horizontal">
+        <h2>New Course</h2>
+        <p>
+          New Course will be added every 3days, so no need to worry about course
+          content because we always update it. And The curriculum is designed
+          with approval from the Google Android Team to prepare Android
+          developers for Global standards. Dicoding is a Google Developer
+          Authorized Training Partner.
+        </p>
+      </div>
+    </section>
+    <!-- Learning Path -->
+    <section id="learning">
+      <center>
+        <h2>Learning Path</h2>
+        <p>
+          The learning path will help you study at the Academy with a curriculum
+          <br />
+          built with leading industry players.
+        </p>
+      </center>
+      <div class="container">
+        <div>
+          <img
+            src="src/img/logo-google.png"
+            alt=""
+            width="250px"
+            height="150px"
+          />
+        </div>
+        <div>
+          <img
+            src="src/img/logo-meta.jpg"
+            alt=""
+            width="250px"
+            height="150px"
+          />
+        </div>
+        <div>
+          <img src="src/img/logo-aws.png" alt="" width="250px" height="150px" />
+        </div>
+        <div>
+          <img
+            src="src/img/microsoft-logo.jpg"
+            alt=""
+            width="250px"
+            height="150px"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="background-default"></footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+    <script>
+      var slidePresent = 0; //slide that present
+      slideshow(); // to call the slideshow function
+
+      function slideshow() {
+        var image = document.getElementsByClassName("slides"); //get image from html
+        for (var i = 0; i < image.length; i++) {
+          //to display all image to none
+          image[i].style.display = "none";
+        }
+        slidePresent++; //increase slidePresent (to change image)
+        if (slidePresent > image.length) {
+          //to make the slide back to the first slide if now the end of slide
+          slidePresent = 1;
+        }
+        image[slidePresent - 1].style.display = "block"; //to make the slide appear
+        setTimeout(slideshow, 3000); //time gap when the slide change
+      }
+
+      function search() {
+        window.location.href = "#" + $("#search").val().toLowerCase();
+      }
+    </script>
+  </body>
+</html>

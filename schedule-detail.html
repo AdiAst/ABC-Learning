@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../jquery-ui-1.11.1/jquery-ui.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Course Schedule</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav id="nav"></nav>
+    <ul class="breadcrumb">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="course-schedule.html">Course Schedule</a></li>
+      <li><a href="schedule-detail.html">Course Schedule Detail</a></li>
+    </ul>
+    <center>
+      <h1>Course Schedule</h1>
+    </center>
+    <div id="accordionCtrl">
+      <h2>16 July</h2>
+      <div class="schedule-card">
+        <div class="container card">
+          <div>
+            <h3>Java</h3>
+            <h3>#Introduction</h3>
+            <p>
+              Java is a programming language that you must learn if you want to
+              explore the world of web development. Currently java is not only
+              used on the client side (browser) only. Java is also used on
+              servers, consoles, desktop programs, mobile, IoT, games, and
+              others.
+            </p>
+          </div>
+          <div>
+            <a href="course-detail.html?status=introductionJava" class="button"
+              >Start Module</a
+            >
+          </div>
+        </div>
+        <div class="container card">
+          <div>
+            <h3>Java</h3>
+            <h3>#Installation</h3>
+            <p>
+              New to Java? ..and still confused about how to write Java in HTML?
+              Calm! I will explain. There are 4 ways to write Java code in HTML.
+              Of these four methods, there are the usual and often used. ..there
+              are also 'weird' ones, they are rarely used but still work! What
+              are the four ways?
+            </p>
+          </div>
+          <div>
+            <a href="course-detail.html?status=installationJava" class="button"
+              >Start Module</a
+            >
+          </div>
+        </div>
+      </div>
+      <h2>17 July</h2>
+      <div class="schedule-card">
+        <div class="container card">
+          <div>
+            <h3>.Net</h3>
+            <h3>#Introduction</h3>
+            <p>
+              The .NET Framework (pronounced as "dot net") is a proprietary
+              software framework developed by Microsoft that runs primarily on
+              Microsoft Windows. It was the predominant implementation of the
+              Common Language Infrastructure (CLI) until being superseded by the
+              cross-platform .
+            </p>
+          </div>
+          <div>
+            <a href="course-detail.html?status=introductionNet" class="button"
+              >Start Module</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="background-default"></footer>
+    <script src="script.js"></script>
+    <script>
+      $("#accordionCtrl").accordion({
+        icons: {
+          header: "ui-icon-circle-triangle-e",
+          activeHeader: "ui-icon-circle-triangle-s",
+        },
+      });
+    </script>
+  </body>
+</html>
