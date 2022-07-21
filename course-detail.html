@@ -117,11 +117,8 @@
     may stall the download/install operation of Java under certain conditions.
     Refer to your specific Internet firewall manual for instructions on how to
     disable your Internet Firewall.
-    <br /><br />
-    Go to the Manual download page
-    <br /><br />
-    Click on Windows Online
-    <br /><br />
+    
+    
     The File Download dialog box appears prompting you to run or save the
     download file To run the installer, click Run. To save the file for later
     installation, click Save. Choose the folder location and save the file to
@@ -216,6 +213,42 @@ In April 2019, Microsoft released .NET Framework 4.8, the last version of the fr
       
         <h2>Why am I getting this pop-up?</h2>
         The .NET Framework is created by Microsoft and provides an environment for running applications. There are different versions available. Many companies develop their apps to run using the .NET Framework, and these apps target a specific version. If you see this pop-up, you're trying to run an application that requires the .NET Framework version 3.5, but that version is not installed on your system.
+        <h2>Enable the .NET Framework 3.5 in Control Panel</h2>
+    You can enable the .NET Framework 3.5 through the Windows Control Panel.
+    This option requires an Internet connection.
+    <ol>
+      <li>
+        Press the Windows key Screenshot of the Windows key logo. on your
+        keyboard, type "Windows Features", and press Enter. The Turn Windows
+        features on or off dialog box appears.
+      </li>
+      <li>
+        Select the .NET Framework 3.5 (includes .NET 2.0 and 3.0) check box,
+        select OK, and reboot your computer if prompted.
+        </li>
+        </ol>
+        <img
+          src="https://docs.microsoft.com/en-us/dotnet/framework/install/media/dotnet-35-windows/dotnet-control-panel.png"
+          alt=""
+        />
+        You don't need to select the child items for Windows Communication
+        Foundation (WCF) HTTP Activation and Windows Communication Foundation
+        (WCF) Non-HTTP Activation unless you're a developer or server
+        administrator who requires this functionality.
+    <h2>Troubleshoot the installation of the .NET Framework 3.5</h2>
+    During installation, you may encounter error 0x800f0906, 0x800f0907,
+    0x800f081f, or 0x800F0922, in which case refer to .NET Framework 3.5
+    installation error: 0x800f0906, 0x800f0907, or 0x800f081f to see how to
+    resolve these issues.
+    <br /><br />
+    If you still can't resolve your installation issue or you don't have an
+    Internet connection, you can try installing it using your Windows
+    installation media. For more information, see Deploy .NET Framework 3.5 by
+    using Deployment Image Servicing and Management (DISM). If you're using
+    Windows 7, Windows 8.1, the latest release Windows 10, or Windows 11, but
+    you don't have the installation media, create an up-to-date installation
+    media here: Create installation media for Windows. Additional information
+    about Windows 11 and Windows 10 Features on Demand: Features on Demand.
     </article>
   </div>
   `);
